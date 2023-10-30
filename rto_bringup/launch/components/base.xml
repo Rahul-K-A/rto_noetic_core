@@ -1,7 +1,7 @@
 <launch>
     <!-- Core parameters -->
     <arg name="robot" default="$(env ROBOT)" doc="Robot type [rto-1 rto-2 rto-3]"/>
-    <arg name="robot_ip" default="0.0.0.0" />
+    <arg name="robot_ip" default="172.26.1.1" />
 
     <!-- Movement parameters -->
     <arg name="max_linear_velocity" default="0.3" />
@@ -26,12 +26,15 @@
         <remap from="rto_joint_states" to="joint_states" />
     </node>
     
+    <node name="rto_laser" pkg="rto_node" type="rto_laserrangefinder_node" output="screen">
+        <param name="hostname" value="$(arg robot_ip)" />
+    </node>
+    
     <!-- Start-up robot-state-publisher for tf info -->
     <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
     	<param name="publish_frequency" type="double" value="20.0" />
-  	</node>
+   </node>
 
-    <!-- Start-up joystick node in order to steer the robot with a joystick -->
-    <include file="$(find rto_teleop)/launch/joystick_teleop.launch" />
+
 
 </launch>
