@@ -1,5 +1,7 @@
 # Changes by Rahul-K-A: Robotino 3 support
-For some reason, the way URDF was supported was faulty. So i re-wrote parts of the Robotino URDF file to get it to work. However, **this fork will only work with Robotino 3**, since I removed the URDFs for the older versions.
+For some reason, the way URDF was supported was faulty. So i re-wrote parts of the Robotino URDF file to get it to work. However, **this fork will only work with Robotino 3**, since I removed the URDFs for the older versions.<br>
+
+If you're new to Robotino and want some resources, check out (this manual I wrote to get up to speed!)[https://github.com/Rahul-K-A/Robotino-Manual]
 
 
 # Robotino-Core
