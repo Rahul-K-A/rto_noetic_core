@@ -1,3 +1,7 @@
+# Changes by Rahul-K-A: Robotino 3 support
+For some reason, the way URDF was supported was faulty. So i re-wrote parts of the Robotino URDF file to get it to work. However, **this fork will only work with Robotino 3**, since I removed the URDFs for the older versions.
+
+
 # Robotino-Core
 ROS source code for communicating with the Festo Robotino robot (RTO).
 
